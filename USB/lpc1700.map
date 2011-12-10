@@ -1,0 +1,814 @@
+Archive member included because of file (symbol)
+
+/usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3.a(start_c.o)
+                              (__cs3_start_c)
+/usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-start.o)
+                              /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/startup_LPC17xx.o (_start)
+/usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libc.a(lib_a-init.o)
+                              /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3.a(start_c.o) (__libc_init_array)
+
+Allocating common symbols
+Common symbol       size              file
+
+USB_AltSetting      0x4               usbcore.o
+BulkBuf             0x40              mscuser.o
+CBW                 0x1f              mscuser.o
+Memory              0x2000            mscuser.o
+EP0Buf              0x40              usbcore.o
+USB_EndPointMask    0x4               usbcore.o
+USB_DeviceAddress   0x1               usbcore.o
+udca                0x80              usbhw.o
+Offset              0x4               mscuser.o
+DDMemMap            0x8               usbhw.o
+CSW                 0xd               mscuser.o
+USB_EndPointHalt    0x4               usbcore.o
+MemOK               0x4               mscuser.o
+Length              0x4               mscuser.o
+USB_Configuration   0x1               usbcore.o
+BulkLen             0x1               mscuser.o
+SetupPacket         0x8               usbcore.o
+USB_NumInterfaces   0x1               usbcore.o
+EP0Data             0x8               usbcore.o
+BulkStage           0x1               mscuser.o
+USB_DeviceStatus    0x2               usbcore.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+rom              0x00000000         0x00080000         xr
+ram              0x10000000         0x00008000         xrw
+ram1             0x2007c000         0x00004000         xrw
+ram2             0x20080000         0x00004000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crti.o
+LOAD /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtbegin.o
+LOAD mscuser.o
+LOAD usbcore.o
+LOAD usbdesc.o
+LOAD usbhw.o
+LOAD usbuser.o
+LOAD /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/core_cm3.o
+LOAD /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+LOAD /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/startup_LPC17xx.o
+START GROUP
+LOAD /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libc.a
+LOAD /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a
+LOAD /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libstdc++.a
+LOAD /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libsupc++.a
+LOAD /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a
+LOAD /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libm.a
+END GROUP
+START GROUP
+LOAD /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a
+LOAD /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libc.a
+LOAD /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3.a
+LOAD /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a
+LOAD /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3micro.a
+END GROUP
+                0x10008000                PROVIDE (__cs3_stack, (__cs3_region_start_ram + __cs3_region_size_ram))
+                0x00005e78                PROVIDE (__cs3_stack_size, ((__cs3_region_start_ram + __cs3_region_size_ram) - _end))
+                0x10002188                PROVIDE (__cs3_heap_start, _end)
+                0x10008000                PROVIDE (__cs3_heap_end, (__cs3_region_start_ram + __cs3_region_size_ram))
+
+.text           0x00000000     0x3790
+ CREATE_OBJECT_SYMBOLS
+                0x00000000                __cs3_region_start_rom = .
+ *(.cs3.region-head.rom)
+                0x00000000                __cs3_interrupt_vector = __cs3_interrupt_vector_cortex_m
+ *(.cs3.interrupt_vector)
+ .cs3.interrupt_vector
+                0x00000000       0xcc /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/startup_LPC17xx.o
+                0x00000000                __cs3_interrupt_vector_cortex_m
+                0x00000001                ASSERT ((. != __cs3_interrupt_vector_cortex_m), No interrupt vector)
+ *(.rom)
+ *(.rom.b)
+                0x000000cc                __cs3_reset = __cs3_reset_cortex_m
+ *(.cs3.reset)
+ .cs3.reset     0x000000cc       0x10 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/startup_LPC17xx.o
+                0x000000cc                __cs3_reset_cortex_m
+                0x00000001                ASSERT ((. != __cs3_reset), No reset code)
+ *(.text .text.* .gnu.linkonce.t.*)
+ .text          0x000000dc        0x0 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crti.o
+ .text          0x000000dc       0x30 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtbegin.o
+ .text          0x0000010c        0x0 mscuser.o
+ .text.MSC_Reset
+                0x0000010c       0x20 mscuser.o
+                0x0000010c                MSC_Reset
+ .text.MSC_GetMaxLUN
+                0x0000012c       0x20 mscuser.o
+                0x0000012c                MSC_GetMaxLUN
+ .text.MSC_MemoryRead
+                0x0000014c      0x104 mscuser.o
+                0x0000014c                MSC_MemoryRead
+ .text.MSC_MemoryWrite
+                0x00000250      0x138 mscuser.o
+                0x00000250                MSC_MemoryWrite
+ .text.MSC_MemoryVerify
+                0x00000388      0x15c mscuser.o
+                0x00000388                MSC_MemoryVerify
+ .text.MSC_RWSetup
+                0x000004e4       0xd0 mscuser.o
+                0x000004e4                MSC_RWSetup
+ .text.DataInFormat
+                0x000005b4       0x64 mscuser.o
+                0x000005b4                DataInFormat
+ .text.DataInTransfer
+                0x00000618       0x90 mscuser.o
+                0x00000618                DataInTransfer
+ .text.MSC_TestUnitReady
+                0x000006a8       0x4c mscuser.o
+                0x000006a8                MSC_TestUnitReady
+ .text.MSC_RequestSense
+                0x000006f4      0x124 mscuser.o
+                0x000006f4                MSC_RequestSense
+ .text.MSC_Inquiry
+                0x00000818      0x228 mscuser.o
+                0x00000818                MSC_Inquiry
+ .text.MSC_ModeSense6
+                0x00000a40       0x60 mscuser.o
+                0x00000a40                MSC_ModeSense6
+ .text.MSC_ModeSense10
+                0x00000aa0       0x98 mscuser.o
+                0x00000aa0                MSC_ModeSense10
+ .text.MSC_ReadCapacity
+                0x00000b38       0x98 mscuser.o
+                0x00000b38                MSC_ReadCapacity
+ .text.MSC_ReadFormatCapacity
+                0x00000bd0       0xd0 mscuser.o
+                0x00000bd0                MSC_ReadFormatCapacity
+ .text.MSC_GetCBW
+                0x00000ca0      0x394 mscuser.o
+                0x00000ca0                MSC_GetCBW
+ .text.MSC_SetCSW
+                0x00001034       0x3c mscuser.o
+                0x00001034                MSC_SetCSW
+ .text.MSC_BulkIn
+                0x00001070       0x6c mscuser.o
+                0x00001070                MSC_BulkIn
+ .text.MSC_BulkOut
+                0x000010dc       0x7c mscuser.o
+                0x000010dc                MSC_BulkOut
+ .text          0x00001158        0x0 usbcore.o
+ .text.USB_ResetCore
+                0x00001158       0x50 usbcore.o
+                0x00001158                USB_ResetCore
+ .text.USB_SetupStage
+                0x000011a8       0x18 usbcore.o
+                0x000011a8                USB_SetupStage
+ .text.USB_DataInStage
+                0x000011c0       0x7c usbcore.o
+                0x000011c0                USB_DataInStage
+ .text.USB_DataOutStage
+                0x0000123c       0x58 usbcore.o
+                0x0000123c                USB_DataOutStage
+ .text.USB_StatusInStage
+                0x00001294       0x18 usbcore.o
+                0x00001294                USB_StatusInStage
+ .text.USB_StatusOutStage
+                0x000012ac       0x18 usbcore.o
+                0x000012ac                USB_StatusOutStage
+ .text.USB_GetStatus
+                0x000012c4      0x148 usbcore.o
+                0x000012c4                USB_GetStatus
+ .text.USB_SetClrFeature
+                0x0000140c      0x168 usbcore.o
+                0x0000140c                USB_SetClrFeature
+ .text.USB_GetDescriptor
+                0x00001574      0x13c usbcore.o
+                0x00001574                USB_GetDescriptor
+ .text.USB_SetConfiguration
+                0x000016b0      0x2d0 usbcore.o
+                0x000016b0                USB_SetConfiguration
+ .text.USB_SetInterface
+                0x00001980      0x210 usbcore.o
+                0x00001980                USB_SetInterface
+ .text.USB_EndPoint0
+                0x00001b90      0x408 usbcore.o
+                0x00001b90                USB_EndPoint0
+ .text          0x00001f98        0x0 usbdesc.o
+ .text          0x00001f98        0x0 usbhw.o
+ .text.NVIC_EnableIRQ
+                0x00001f98       0x38 usbhw.o
+ .text.EPAdr    0x00001fd0       0x34 usbhw.o
+                0x00001fd0                EPAdr
+ .text.WrCmd    0x00002004       0x48 usbhw.o
+                0x00002004                WrCmd
+ .text.WrCmdDat
+                0x0000204c       0x7c usbhw.o
+                0x0000204c                WrCmdDat
+ .text.RdCmdDat
+                0x000020c8       0x54 usbhw.o
+                0x000020c8                RdCmdDat
+ .text.USB_Init
+                0x0000211c       0xf4 usbhw.o
+                0x0000211c                USB_Init
+ .text.USB_Connect
+                0x00002210       0x34 usbhw.o
+                0x00002210                USB_Connect
+ .text.USB_Reset
+                0x00002244      0x180 usbhw.o
+                0x00002244                USB_Reset
+ .text.USB_Suspend
+                0x000023c4        0xc usbhw.o
+                0x000023c4                USB_Suspend
+ .text.USB_Resume
+                0x000023d0        0xc usbhw.o
+                0x000023d0                USB_Resume
+ .text.USB_WakeUp
+                0x000023dc       0x2c usbhw.o
+                0x000023dc                USB_WakeUp
+ .text.USB_WakeUpCfg
+                0x00002408       0x14 usbhw.o
+                0x00002408                USB_WakeUpCfg
+ .text.USB_SetAddress
+                0x0000241c       0x48 usbhw.o
+                0x0000241c                USB_SetAddress
+ .text.USB_Configure
+                0x00002464       0x68 usbhw.o
+                0x00002464                USB_Configure
+ .text.USB_ConfigEP
+                0x000024cc       0x94 usbhw.o
+                0x000024cc                USB_ConfigEP
+ .text.USB_DirCtrlEP
+                0x00002560       0x14 usbhw.o
+                0x00002560                USB_DirCtrlEP
+ .text.USB_EnableEP
+                0x00002574       0x30 usbhw.o
+                0x00002574                USB_EnableEP
+ .text.USB_DisableEP
+                0x000025a4       0x34 usbhw.o
+                0x000025a4                USB_DisableEP
+ .text.USB_ResetEP
+                0x000025d8       0x30 usbhw.o
+                0x000025d8                USB_ResetEP
+ .text.USB_SetStallEP
+                0x00002608       0x34 usbhw.o
+                0x00002608                USB_SetStallEP
+ .text.USB_ClrStallEP
+                0x0000263c       0x30 usbhw.o
+                0x0000263c                USB_ClrStallEP
+ .text.USB_ReadEP
+                0x0000266c       0xd0 usbhw.o
+                0x0000266c                USB_ReadEP
+ .text.USB_WriteEP
+                0x0000273c       0xac usbhw.o
+                0x0000273c                USB_WriteEP
+ .text.USB_DMA_Setup
+                0x000027e8      0x224 usbhw.o
+                0x000027e8                USB_DMA_Setup
+ .text.USB_DMA_Enable
+                0x00002a0c       0x2c usbhw.o
+                0x00002a0c                USB_DMA_Enable
+ .text.USB_DMA_Disable
+                0x00002a38       0x2c usbhw.o
+                0x00002a38                USB_DMA_Disable
+ .text.USB_DMA_Status
+                0x00002a64       0xa4 usbhw.o
+                0x00002a64                USB_DMA_Status
+ .text.USB_DMA_BufAdr
+                0x00002b08       0x40 usbhw.o
+                0x00002b08                USB_DMA_BufAdr
+ .text.USB_DMA_BufCnt
+                0x00002b48       0x44 usbhw.o
+                0x00002b48                USB_DMA_BufCnt
+ .text.USB_GetFrame
+                0x00002b8c       0x48 usbhw.o
+                0x00002b8c                USB_GetFrame
+ .text.USB_IRQHandler
+                0x00002bd4      0x3dc usbhw.o
+                0x00002bd4                USB_IRQHandler
+ .text          0x00002fb0        0x0 usbuser.o
+ .text.USB_Reset_Event
+                0x00002fb0        0xc usbuser.o
+                0x00002fb0                USB_Reset_Event
+ .text.USB_Configure_Event
+                0x00002fbc        0xc usbuser.o
+                0x00002fbc                USB_Configure_Event
+ .text.USB_EndPoint1
+                0x00002fc8       0x14 usbuser.o
+                0x00002fc8                USB_EndPoint1
+ .text.USB_EndPoint2
+                0x00002fdc       0x28 usbuser.o
+                0x00002fdc                USB_EndPoint2
+ .text.USB_EndPoint3
+                0x00003004       0x14 usbuser.o
+                0x00003004                USB_EndPoint3
+ .text.USB_EndPoint4
+                0x00003018       0x14 usbuser.o
+                0x00003018                USB_EndPoint4
+ .text.USB_EndPoint5
+                0x0000302c       0x14 usbuser.o
+                0x0000302c                USB_EndPoint5
+ .text.USB_EndPoint6
+                0x00003040       0x14 usbuser.o
+                0x00003040                USB_EndPoint6
+ .text.USB_EndPoint7
+                0x00003054       0x14 usbuser.o
+                0x00003054                USB_EndPoint7
+ .text.USB_EndPoint8
+                0x00003068       0x14 usbuser.o
+                0x00003068                USB_EndPoint8
+ .text.USB_EndPoint9
+                0x0000307c       0x14 usbuser.o
+                0x0000307c                USB_EndPoint9
+ .text.USB_EndPoint10
+                0x00003090       0x14 usbuser.o
+                0x00003090                USB_EndPoint10
+ .text.USB_EndPoint11
+                0x000030a4       0x14 usbuser.o
+                0x000030a4                USB_EndPoint11
+ .text.USB_EndPoint12
+                0x000030b8       0x14 usbuser.o
+                0x000030b8                USB_EndPoint12
+ .text.USB_EndPoint13
+                0x000030cc       0x14 usbuser.o
+                0x000030cc                USB_EndPoint13
+ .text.USB_EndPoint14
+                0x000030e0       0x14 usbuser.o
+                0x000030e0                USB_EndPoint14
+ .text.USB_EndPoint15
+                0x000030f4       0x14 usbuser.o
+                0x000030f4                USB_EndPoint15
+ .text          0x00003108        0x0 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/core_cm3.o
+ .text          0x00003108        0x0 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+ .text.SystemCoreClockUpdate
+                0x00003108      0x228 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+                0x00003108                SystemCoreClockUpdate
+ .text.SystemInit
+                0x00003330      0x240 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+                0x00003330                SystemInit
+ .text          0x00003570       0x14 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/startup_LPC17xx.o
+                0x00003570                NMI_Handler
+                0x00003572                HardFault_Handler
+                0x00003574                MemManage_Handler
+                0x00003576                BusFault_Handler
+                0x00003578                UsageFault_Handler
+                0x0000357a                SVC_Handler
+                0x0000357c                DebugMon_Handler
+                0x0000357e                PendSV_Handler
+                0x00003580                SysTick_Handler
+                0x00003582                TIMER2_IRQHandler
+                0x00003582                RIT_IRQHandler
+                0x00003582                I2C0_IRQHandler
+                0x00003582                USBActivity_IRQHandler
+                0x00003582                PWM1_IRQHandler
+                0x00003582                I2C1_IRQHandler
+                0x00003582                EINT2_IRQHandler
+                0x00003582                UART1_IRQHandler
+                0x00003582                EINT3_IRQHandler
+                0x00003582                CANActivity_IRQHandler
+                0x00003582                TIMER3_IRQHandler
+                0x00003582                UART0_IRQHandler
+                0x00003582                PLL0_IRQHandler
+                0x00003582                CAN_IRQHandler
+                0x00003582                PLL1_IRQHandler
+                0x00003582                SSP0_IRQHandler
+                0x00003582                I2S_IRQHandler
+                0x00003582                I2C2_IRQHandler
+                0x00003582                RTC_IRQHandler
+                0x00003582                TIMER0_IRQHandler
+                0x00003582                SPI_IRQHandler
+                0x00003582                EINT1_IRQHandler
+                0x00003582                TIMER1_IRQHandler
+                0x00003582                UART2_IRQHandler
+                0x00003582                Default_Handler
+                0x00003582                ADC_IRQHandler
+                0x00003582                SSP1_IRQHandler
+                0x00003582                BOD_IRQHandler
+                0x00003582                WDT_IRQHandler
+                0x00003582                QEI_IRQHandler
+                0x00003582                EINT0_IRQHandler
+                0x00003582                DMA_IRQHandler
+                0x00003582                UART3_IRQHandler
+                0x00003582                MCPWM_IRQHandler
+                0x00003582                ENET_IRQHandler
+ .text          0x00003584       0x30 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3.a(start_c.o)
+                0x00003584                __cs3_premain
+ .text.cs3.init
+                0x000035b4       0x50 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3.a(start_c.o)
+                0x000035b4                __cs3_start_c
+ .text          0x00003604        0x0 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-start.o)
+ .text.cs3.init
+                0x00003604       0x10 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-start.o)
+                0x00003604                _start
+ .text          0x00003614       0x50 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libc.a(lib_a-init.o)
+                0x00003614                __libc_init_array
+ .text          0x00003664        0x0 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtend.o
+ .text          0x00003664        0x0 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtn.o
+ *(.plt)
+ *(.gnu.warning)
+ *(.glue_7t)
+ .glue_7t       0x00000000        0x0 linker stubs
+ *(.glue_7)
+ .glue_7        0x00000000        0x0 linker stubs
+ *(.vfp11_veneer)
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.USB_DeviceDescriptor
+                0x00003664       0x14 usbdesc.o
+                0x00003664                USB_DeviceDescriptor
+ .rodata.USB_ConfigDescriptor
+                0x00003678       0x24 usbdesc.o
+                0x00003678                USB_ConfigDescriptor
+ .rodata.USB_StringDescriptor
+                0x0000369c       0x70 usbdesc.o
+                0x0000369c                USB_StringDescriptor
+ .rodata.DDAdr  0x0000370c        0x8 usbhw.o
+                0x0000370c                DDAdr
+ .rodata.DDSz   0x00003714        0x8 usbhw.o
+                0x00003714                DDSz
+ .rodata.USB_P_EP
+                0x0000371c       0x40 usbuser.o
+                0x0000371c                USB_P_EP
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+ .ARM.extab.cs3.reset
+                0x0000375c        0x0 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/startup_LPC17xx.o
+ *(.gcc_except_table)
+ *(.eh_frame_hdr)
+ *(.eh_frame)
+                0x0000375c                . = ALIGN (0x4)
+ *(.init)
+ .init          0x0000375c        0x4 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crti.o
+                0x0000375c                _init
+ .init          0x00003760        0x8 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtn.o
+                0x00003768                . = ALIGN (0x4)
+                0x00003768                __preinit_array_start = .
+ *(.preinit_array)
+                0x00003768                __preinit_array_end = .
+                0x00003768                . = ALIGN (0x4)
+                0x00003768                __init_array_start = .
+ *(SORT(.init_array.*))
+ *(.init_array)
+ .init_array    0x00003768        0x4 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtbegin.o
+                0x0000376c                __init_array_end = .
+                0x0000376c                . = ALIGN (0x4)
+ *crtbegin.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *crtend.o(.ctors)
+                0x0000376c                . = ALIGN (0x4)
+ *(.fini)
+ .fini          0x0000376c        0x4 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crti.o
+                0x0000376c                _fini
+ .fini          0x00003770        0x8 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtn.o
+                0x00003778                . = ALIGN (0x4)
+                0x00003778                __fini_array_start = .
+ *(.fini_array)
+ .fini_array    0x00003778        0x4 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtbegin.o
+ *(SORT(.fini_array.*))
+                0x0000377c                __fini_array_end = .
+ *crtbegin.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *crtend.o(.dtors)
+                0x0000377c                . = ALIGN (0x4)
+                0x0000377c                __cs3_regions = .
+                0x0000377c        0x4 LONG 0x0
+                0x00003780        0x4 LONG 0x3798 __cs3_region_init_ram
+                0x00003784        0x4 LONG 0x10000000 __cs3_region_start_ram
+                0x00003788        0x4 LONG 0x10 __cs3_region_init_size_ram
+                0x0000378c        0x4 LONG 0x2178 __cs3_region_zero_size_ram
+                0x00003790                __exidx_start = .
+
+.v4_bx          0x00003790        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.ARM.exidx      0x00003790        0x8
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+ .ARM.exidx.cs3.reset
+                0x00003790        0x8 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/startup_LPC17xx.o
+                0x00003798                __exidx_end = .
+
+.text.align     0x00003798        0x0
+                0x00003798                . = ALIGN (0x8)
+                0x00003798                _etext = .
+                0x00080000                __cs3_region_size_rom = 0x80000
+                0x00000001                __cs3_region_num = 0x1
+
+.data           0x10000000       0x10 load address 0x00003798
+                0x10000000                __cs3_region_start_ram = .
+ *(.cs3.region-head.ram)
+ *(.jcr)
+ .jcr           0x10000000        0x0 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtbegin.o
+ .jcr           0x10000000        0x4 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtend.o
+ *(.got.plt)
+ *(.got)
+ *(.shdata)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x10000004        0x0 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crti.o
+ .data          0x10000004        0x4 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtbegin.o
+                0x10000004                __dso_handle
+ .data          0x10000008        0x0 mscuser.o
+ .data          0x10000008        0x0 usbcore.o
+ .data          0x10000008        0x0 usbdesc.o
+ .data          0x10000008        0x0 usbhw.o
+ .data          0x10000008        0x0 usbuser.o
+ .data          0x10000008        0x0 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/core_cm3.o
+ .data          0x10000008        0x0 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+ .data.SystemCoreClock
+                0x10000008        0x4 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+                0x10000008                SystemCoreClock
+ .data          0x1000000c        0x0 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/startup_LPC17xx.o
+ .data          0x1000000c        0x0 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3.a(start_c.o)
+ .data          0x1000000c        0x0 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-start.o)
+ .data          0x1000000c        0x0 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libc.a(lib_a-init.o)
+ .data          0x1000000c        0x0 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtend.o
+ .data          0x1000000c        0x0 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtn.o
+ *(.ram)
+                0x10000010                . = ALIGN (0x8)
+ *fill*         0x1000000c        0x4 00
+                0x10000010                _edata = .
+
+.bss            0x10000010     0x2178 load address 0x000037a8
+ *(.shbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x10000010        0x0 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crti.o
+ .bss           0x10000010        0x1 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtbegin.o
+ .bss           0x10000011        0x0 mscuser.o
+ .bss           0x10000011        0x0 usbcore.o
+ .bss           0x10000011        0x0 usbdesc.o
+ .bss           0x10000011        0x0 usbhw.o
+ .bss           0x10000011        0x0 usbuser.o
+ .bss           0x10000011        0x0 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/core_cm3.o
+ .bss           0x10000011        0x0 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+ .bss           0x10000011        0x0 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/startup_LPC17xx.o
+ .bss           0x10000011        0x0 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3.a(start_c.o)
+ .bss           0x10000011        0x0 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-start.o)
+ .bss           0x10000011        0x0 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libc.a(lib_a-init.o)
+ .bss           0x10000011        0x0 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtend.o
+ .bss           0x10000011        0x0 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtn.o
+ *(COMMON)
+ *fill*         0x10000011        0x3 00
+ COMMON         0x10000014     0x207e mscuser.o
+                0x10000014                BulkBuf
+                0x10000054                CBW
+                0x10000074                Memory
+                0x10002074                Offset
+                0x10002078                CSW
+                0x10002088                MemOK
+                0x1000208c                Length
+                0x10002090                BulkLen
+                0x10002091                BulkStage
+ *fill*         0x10002092        0x2 00
+ COMMON         0x10002094       0x6a usbcore.o
+                0x10002094                USB_AltSetting
+                0x10002098                EP0Buf
+                0x100020d8                USB_EndPointMask
+                0x100020dc                USB_DeviceAddress
+                0x100020e0                USB_EndPointHalt
+                0x100020e4                USB_Configuration
+                0x100020e8                SetupPacket
+                0x100020f0                USB_NumInterfaces
+                0x100020f4                EP0Data
+                0x100020fc                USB_DeviceStatus
+ *fill*         0x100020fe        0x2 00
+ COMMON         0x10002100       0x88 usbhw.o
+                0x10002100                udca
+                0x10002180                DDMemMap
+ *(.ram.b)
+                0x10002188                . = ALIGN (0x8)
+                0x10002188                _end = .
+                0x10002188                __end = .
+
+.usb_ram        0x20080000      0x220
+ *.o(USB_RAM)
+ USB_RAM        0x20080000      0x220 usbhw.o
+                0x20080000                UDCA
+                0x20080080                DD_NISO_Mem
+                0x20080180                DD_ISO_Mem
+
+.heap           0x10002188     0x1000
+ *(.heap)
+ .heap          0x10002188     0x1000 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/startup_LPC17xx.o
+                0x10002188                __cs3_heap_start
+                0x10003188                __cs3_heap_end
+
+.stack          0x10007f00      0x100
+ *(.stack)
+ .stack         0x10007f00      0x100 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/startup_LPC17xx.o
+                0x10007f00                __cs3_stack_mem
+                0x10008000                _estack = .
+                0x10008000                PROVIDE (estack, .)
+                0x00003798                __cs3_region_init_ram = LOADADDR (.data)
+                0x00000010                __cs3_region_init_size_ram = (_edata - __cs3_region_start_ram)
+                0x00002178                __cs3_region_zero_size_ram = (_end - _edata)
+                0x00008000                __cs3_region_size_ram = 0x8000
+                0x00000001                __cs3_region_num = 0x1
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.comment        0x00000000       0x2a
+ .comment       0x00000000       0x2a mscuser.o
+                                 0x2b (size before relaxing)
+ .comment       0x00000000       0x2b usbcore.o
+ .comment       0x00000000       0x2b usbdesc.o
+ .comment       0x00000000       0x2b usbhw.o
+ .comment       0x00000000       0x2b usbuser.o
+ .comment       0x00000000       0x2b /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/core_cm3.o
+ .comment       0x00000000       0x2b /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+
+.debug_aranges  0x00000000      0x328
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0xb0 mscuser.o
+ .debug_aranges
+                0x000000b0       0x78 usbcore.o
+ .debug_aranges
+                0x00000128      0x110 usbhw.o
+ .debug_aranges
+                0x00000238       0xa0 usbuser.o
+ .debug_aranges
+                0x000002d8       0x28 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+ .debug_aranges
+                0x00000300       0x28 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/startup_LPC17xx.o
+
+.debug_pubnames
+                0x00000000      0x7f5
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000      0x1d2 mscuser.o
+ .debug_pubnames
+                0x000001d2      0x1c6 usbcore.o
+ .debug_pubnames
+                0x00000398       0x5d usbdesc.o
+ .debug_pubnames
+                0x000003f5      0x252 usbhw.o
+ .debug_pubnames
+                0x00000647      0x15f usbuser.o
+ .debug_pubnames
+                0x000007a6       0x4f /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+
+.debug_info     0x00000000     0x2e91
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000      0x505 mscuser.o
+ .debug_info    0x00000505      0x890 usbcore.o
+ .debug_info    0x00000d95       0xf3 usbdesc.o
+ .debug_info    0x00000e88     0x1639 usbhw.o
+ .debug_info    0x000024c1      0x39e usbuser.o
+ .debug_info    0x0000285f       0x68 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/core_cm3.o
+ .debug_info    0x000028c7      0x509 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+ .debug_info    0x00002dd0       0xc1 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/startup_LPC17xx.o
+
+.debug_abbrev   0x00000000      0x928
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x1a6 mscuser.o
+ .debug_abbrev  0x000001a6      0x21d usbcore.o
+ .debug_abbrev  0x000003c3       0x61 usbdesc.o
+ .debug_abbrev  0x00000424      0x2c2 usbhw.o
+ .debug_abbrev  0x000006e6      0x106 usbuser.o
+ .debug_abbrev  0x000007ec       0x28 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/core_cm3.o
+ .debug_abbrev  0x00000814      0x102 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+ .debug_abbrev  0x00000916       0x12 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/startup_LPC17xx.o
+
+.debug_line     0x00000000     0x12e7
+ *(.debug_line)
+ .debug_line    0x00000000      0x3de mscuser.o
+ .debug_line    0x000003de      0x41f usbcore.o
+ .debug_line    0x000007fd       0xa1 usbdesc.o
+ .debug_line    0x0000089e      0x579 usbhw.o
+ .debug_line    0x00000e17      0x21e usbuser.o
+ .debug_line    0x00001035       0x1d /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/core_cm3.o
+ .debug_line    0x00001052      0x1e4 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+ .debug_line    0x00001236       0xb1 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/startup_LPC17xx.o
+
+.debug_frame    0x00000000      0x9fc
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x230 mscuser.o
+ .debug_frame   0x00000230      0x17c usbcore.o
+ .debug_frame   0x000003ac      0x3b8 usbhw.o
+ .debug_frame   0x00000764      0x1ec usbuser.o
+ .debug_frame   0x00000950       0x40 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+ .debug_frame   0x00000990       0x40 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3.a(start_c.o)
+ .debug_frame   0x000009d0       0x2c /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libc.a(lib_a-init.o)
+
+.debug_str      0x00000000     0x129b
+ *(.debug_str)
+ .debug_str     0x00000000      0x247 mscuser.o
+                                0x29f (size before relaxing)
+ .debug_str     0x00000247      0x3c9 usbcore.o
+                                0x53b (size before relaxing)
+ .debug_str     0x00000610        0xa usbdesc.o
+                                 0xf7 (size before relaxing)
+ .debug_str     0x0000061a      0xa64 usbhw.o
+                                0xbff (size before relaxing)
+ .debug_str     0x0000107e      0x106 usbuser.o
+                                0x1f3 (size before relaxing)
+ .debug_str     0x00001184       0x42 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/core_cm3.o
+                                 0xd2 (size before relaxing)
+ .debug_str     0x000011c6       0xd5 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+                                0x2d5 (size before relaxing)
+
+.debug_loc      0x00000000     0x1080
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x380 mscuser.o
+ .debug_loc     0x00000380      0x270 usbcore.o
+ .debug_loc     0x000005f0      0x698 usbhw.o
+ .debug_loc     0x00000c88      0x3a0 usbuser.o
+ .debug_loc     0x00001028       0x58 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+
+.ARM.attributes
+                0x00000000       0x25
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x19 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crti.o
+ .ARM.attributes
+                0x00000019       0x29 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtbegin.o
+ .ARM.attributes
+                0x00000042       0x31 mscuser.o
+ .ARM.attributes
+                0x00000073       0x31 usbcore.o
+ .ARM.attributes
+                0x000000a4       0x31 usbdesc.o
+ .ARM.attributes
+                0x000000d5       0x31 usbhw.o
+ .ARM.attributes
+                0x00000106       0x31 usbuser.o
+ .ARM.attributes
+                0x00000137       0x31 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/core_cm3.o
+ .ARM.attributes
+                0x00000168       0x31 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+ .ARM.attributes
+                0x00000199       0x21 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/startup_LPC17xx.o
+ .ARM.attributes
+                0x000001ba       0x29 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3.a(start_c.o)
+ .ARM.attributes
+                0x000001e3       0x19 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-start.o)
+ .ARM.attributes
+                0x000001fc       0x29 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libc.a(lib_a-init.o)
+ .ARM.attributes
+                0x00000225       0x29 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtend.o
+ .ARM.attributes
+                0x0000024e       0x19 /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtn.o
+
+/DISCARD/
+ *(.note.GNU-stack)
+LOAD /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a
+START GROUP
+LOAD /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a
+LOAD /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libc.a
+END GROUP
+LOAD /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtend.o
+LOAD /usr/local/pkg/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtn.o
+OUTPUT(usb elf32-littlearm)
+
+.debug_pubtypes
+                0x00000000      0x414
+ .debug_pubtypes
+                0x00000000       0x69 mscuser.o
+ .debug_pubtypes
+                0x00000069      0x1de usbcore.o
+ .debug_pubtypes
+                0x00000247       0x1e usbdesc.o
+ .debug_pubtypes
+                0x00000265      0x10f usbhw.o
+ .debug_pubtypes
+                0x00000374       0x37 usbuser.o
+ .debug_pubtypes
+                0x000003ab       0x12 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/core_cm3.o
+ .debug_pubtypes
+                0x000003bd       0x57 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+
+.debug_ranges   0x00000000      0x2d0
+ .debug_ranges  0x00000000       0xa0 mscuser.o
+ .debug_ranges  0x000000a0       0x68 usbcore.o
+ .debug_ranges  0x00000108      0x100 usbhw.o
+ .debug_ranges  0x00000208       0x90 usbuser.o
+ .debug_ranges  0x00000298       0x18 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+ .debug_ranges  0x000002b0       0x20 /usr/local/pkg/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/startup_LPC17xx.o
